@@ -1,0 +1,41 @@
+{
+  "by_type": {
+    "Overheating": 222,
+    "Electrical Failure": 238,
+    "Motor Failure": 242,
+    "Mechanical Failure": 250,
+    "Bearing Failure": 255,
+    "Pressure Failure": 265
+  },
+  "factory_rate": {
+    "FAC-01": 1.71,
+    "FAC-02": 1.38,
+    "FAC-03": 1.43,
+    "FAC-04": 1.6,
+    "FAC-05": 1.41,
+    "FAC-06": 1.43,
+    "FAC-07": 1.36,
+    "FAC-08": 1.62,
+    "FAC-09": 1.37,
+    "FAC-10": 1.42
+  },
+  "chi2_p": 0.4097914589416943,
+  "risk_vs_failure": {
+    "Low": {
+      "rate_pct": 1.44,
+      "readings": 73425
+    },
+    "Medium": {
+      "rate_pct": 1.55,
+      "readings": 15554
+    },
+    "High": {
+      "rate_pct": 1.61,
+      "readings": 7741
+    },
+    "Critical": {
+      "rate_pct": 1.46,
+      "readings": 3280
+    }
+  }
+}

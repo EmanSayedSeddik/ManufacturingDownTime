@@ -1,0 +1,33 @@
+// Power BI measures for the star schema (tables: fact_readings, dim_machine, dim_date, ...)
+// NOTE: written by hand, not run inside Power BI Desktop by the author. Paste them one by one and check each result.
+
+Total Readings = COUNTROWS ( fact_readings )
+
+Failure Events = CALCULATE ( COUNTROWS ( fact_readings ), fact_readings[machine_failure] = 1 )
+// machine_failure is 0/1, so SUM ( fact_readings[machine_failure] ) gives the same number.
+
+Failure Rate % = DIVIDE ( [Failure Events], [Total Readings] )
+
+Machines With Failure = CALCULATE ( DISTINCTCOUNT ( fact_readings[machine_key] ), fact_readings[machine_failure] = 1 )
+
+Avg Health Score = AVERAGE ( fact_readings[machine_health_score] )
+
+Avg Failure Probability % = AVERAGE ( fact_readings[failure_probability] )   // source stores it as a percent (0-14.5)
+
+Avg Remaining Life (h) = AVERAGE ( fact_readings[remaining_useful_life_hours] )
+
+Total Downtime (h) = SUM ( fact_readings[downtime_hours] )
+
+Total Maintenance Cost = SUM ( fact_readings[maintenance_cost] )
+
+Avg Repair Duration (h) = AVERAGE ( fact_readings[last_repair_duration_hours] )
+
+Critical Readings = CALCULATE ( COUNTROWS ( fact_readings ), fact_readings[risk_level] = "Critical" )
+
+Critical Readings % = DIVIDE ( [Critical Readings], [Total Readings] )
+
+Machines With Critical Reading =
+CALCULATE ( DISTINCTCOUNT ( fact_readings[machine_key] ), fact_readings[risk_level] = "Critical" )
+
+// Cost-per-failure style ratio (use with care: failures are rare, so this is volatile when filtered a lot)
+Maintenance Cost per Failure = DIVIDE ( [Total Maintenance Cost], [Failure Events] )

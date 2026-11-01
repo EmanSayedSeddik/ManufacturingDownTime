@@ -1,0 +1,13 @@
+{
+  "name": "Smart Manufacturing",
+  "dataColors": ["#1F3A5F", "#3C7DD9", "#F2A33A", "#D64545", "#2E9E83", "#8A6FDF", "#7A8AA0", "#B8C4D3"],
+  "background": "#FFFFFF",
+  "foreground": "#1B2733",
+  "tableAccent": "#1F3A5F",
+  "good": "#2E9E83", "neutral": "#F2A33A", "bad": "#D64545",
+  "textClasses": {
+    "title": {"fontFace": "Segoe UI Semibold", "fontSize": 14, "color": "#1F3A5F"},
+    "label": {"fontFace": "Segoe UI", "fontSize": 10, "color": "#1B2733"},
+    "callout": {"fontFace": "Segoe UI Semibold", "fontSize": 28, "color": "#1F3A5F"}
+  }
+}

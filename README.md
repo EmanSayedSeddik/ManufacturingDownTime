@@ -73,7 +73,7 @@ This project builds an end-to-end data analytics pipeline starting from raw mult
 ---
 
 ## 7. Instructor
-* **[Instructor Name]**
+* **Adham Osama Mohamed**
 
 ---
 

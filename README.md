@@ -47,9 +47,9 @@ This project builds an end-to-end data analytics pipeline starting from raw mult
   * Contributing to dashboard layout design and insight storytelling.
 
 * **Nourhan Osman (Team Member):**
-  * Analyzing shift attendance patterns, overtime bottlenecks, and machine coverage metrics.
-  * Building visual charts, interactive filters, and formatting executive dashboards.
-  * Preparing project documentation, presentation slides, and final report synthesis.
+  cleaned and prepared the 72+ column monitoring table—containing manufacturing downtime, sensor, and quality data—using Power Query.
+ extracted a predictive regression formula in Excel to forecast next-cycle machine failures.
+ created 5+ Power BI dashboards to predict equipment downtime and uncover failure root causes.
 
 ---
 

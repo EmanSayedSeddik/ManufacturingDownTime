@@ -1,4 +1,0 @@
-data/*.csv
-data/star/
-__pycache__/
-*.pbix.bak
